@@ -1,0 +1,880 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Trirong:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+/* Variables */
+:root {
+    --primary-color: #202020;
+    --secondary-color: #717171;
+    --background-color: #167ac6;
+    --background-color-b: #101010;
+    --inverted-color: #ffffff;
+    --banner-gradient: linear-gradient(rgba(22, 122, 198, 0.4), rgba(22, 122, 198, 0.4));
+    --font-family: 'Open Sans', sans-serif;
+    --header-font-familiy: 'Trirong', serif;
+}
+
+/* CSS Reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/* Estilos Generales */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    p {
+        color: var(--secondary-color) 
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        font-weight: 400;
+        line-height: 1.1;
+        font-size: 1.75rem;
+        font-family: var(--header-font-familiy);
+        color: var(--primary-color);
+    }
+
+    h4 {
+        font-weight: 400;
+        line-height: 1.1;
+        font-size: 1.2rem;
+        font-family: var(--header-font-familiy);
+        color: var(--primary-color);
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 0 30px;
+        max-width: 75%;
+    }
+
+    .container-wide {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .col-2-3 {
+        flex-basis: 66.66%;
+        max-width: 66.66%;
+    }
+
+    .col-2 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .col-3 {
+        flex-basis: 33.33%;
+        max-width: 33.33%;
+    }
+
+    .col-4 {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    .no-padding {
+        padding: 0;
+    }
+
+    .no-margin {
+        margin: 0;
+    }
+
+    .width-100 {
+        width: 100%;
+    }
+
+    .display {
+        display: block !important;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    /* Estilos del Header */
+    header {
+        margin-bottom: 10px;
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            color: var(--inverted-color);
+            background: var(--background-color);
+        }
+        
+        .header-logo {
+            height: 100px;
+        }
+
+        .header-logo img {
+            height: 100%;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+                
+        .menu {
+            display: flex;
+            flex-direction: row;
+            font-weight: 600;
+        } 
+        
+        .sub-menu {
+            margin-left: 1rem;
+        }
+        
+        .sub-menu-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 16px;
+        }
+        
+        .sub-menu-link:hover {
+            background-color: var(--background-color);
+            color: var(--inverted-color);
+        }
+    }
+
+    .scroll-up {
+        width: 45px;
+        height: 45px;
+        background-color: var(--background-color);
+        color: var(--inverted-color);
+        text-align: center;
+        line-height: 45px;
+        font-size: 1em;
+        border: 1px solid var(--background-color-b);
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        border-radius: 12px;
+    }
+
+    /* Estilos de los Sections */
+    #section-banner {
+        height: 500px;
+    }
+
+    #section-get-started {
+        margin-top: 50px;
+    }
+
+    #section-featured-courses, #section-testimonials {
+        background-color: var(--background-color);
+    }
+
+    section {
+        margin-bottom: 30px;
+
+        /* Estilos del Banner */
+        .banner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+
+            h3, p {
+                color: var(--inverted-color);
+            }
+
+            .banner-image {
+                width: 100%;
+                max-height: 500px;
+            }
+    
+            .button-signup {
+                background-color: var(--background-color);
+                color: var(--inverted-color);
+                text-decoration: none;
+                padding: 15px;
+                border-radius: 5px;
+                font-size: 1rem;
+                margin-top: 30px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .button-signup:hover {
+                background-color: var(--background-color-b);
+            }
+
+            .carousel {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                transition: transform 0.5s ease-in-out;
+
+                h3 {
+                    margin-top: 8rem;
+                }
+
+                p {
+                    padding: 0 5rem;
+                }
+
+                .carousel-image {
+                  width: 100%;
+                  object-fit: cover;
+                  display: none;
+                }
+                
+                .carousel-image.active {
+                  display: block;
+                } 
+
+                .carousel-image-1 {
+                    background: var(--banner-gradient), url(../images/banner-1.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .carousel-image-2 {
+                    background: var(--banner-gradient), url(../images/banner-2.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .carousel-image-3 {
+                    background: var(--banner-gradient), url(../images/banner-3.jpg);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .carousel-button {
+                  position: absolute;
+                  top: 50%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  color: white;
+                  border: none;
+                  padding: 10px;
+                  cursor: pointer;
+                  z-index: 1000;
+                  transform: translateY(-50%);
+                }
+                
+                .prev {
+                  left: 10px;
+                }
+                
+                .next {
+                  right: 10px;
+                }
+              }
+        }
+
+        /* Estilos Primeros Pasos */
+        .container-get-started-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .container-get-started {
+            padding: 5rem 2rem;
+
+            p {
+                margin-right: 30px;
+            }
+        }
+
+        /* Estilos de Cursos Recomendados */
+        .featured-container {
+            padding: 30px 0;
+            text-align: center;
+
+            h3 {
+                color: var(--inverted-color);
+                margin-bottom: 30px;
+            }
+
+            .featured-card {
+                background-color: var(--inverted-color);
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: left;
+
+                .featured-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 5px;
+                    margin-bottom: 5px;
+                    border-bottom: 1px solid var(--secondary-color);
+
+                    .featured-header-text {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .featured-image {
+                    border-radius: 8px 8px 0 0;
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+                
+                .featured-content {
+                    padding: 20px;
+                }
+                
+                .featured-text {
+                    margin-bottom: 10px;
+                    text-align: justify;
+                }
+            }
+        }
+
+        /* Estilos de la Galería Cursos */
+        .gallery-container {
+            
+            .col-3:hover .gallery-contents {
+                opacity: 0.8;
+            }
+
+            h4 {
+                text-align: center;
+                font-size: 1.2rem;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .gallery-card {
+                position: relative;
+                border-radius: 8px;
+                margin: 30px 15px 10px;
+
+                .gallery-contents {
+                    position: absolute;
+                    background-color: var(--background-color);
+                    color: var(--inverted-color);
+                    width: 100%;
+                    height: 99%;
+                    padding: 40px 20px;
+                    text-align: center;
+                    opacity: 0;
+                    top: 0px;
+                    left: 0px;
+                    border-radius: 8px;
+                    transition: all 0.3s ease-in-out;
+
+                    p {
+                        color: var(--inverted-color);
+                    }
+
+                    i {
+                        margin: 3px;
+                    }
+                }
+
+                .gallery-img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        /* Estilos de los Testimonios */      
+        .testimonial-container {
+            background-color: var(--background-color);
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            border-radius: 16px;
+
+            h3 {
+                color: var(--inverted-color);
+                margin-bottom: 30px;
+            }
+
+            .testimonial-card {
+                background-color: var(--inverted-color);
+                border: 1px solid var(--inverted-color);
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 300px;
+                text-align: center;
+                margin: 0.7rem;
+
+                .testimonial-image {
+                    width: 100%;
+                    padding: 5px;
+                    height: auto;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                
+                .testimonial-content {
+                    padding: 20px;
+                }
+                
+                .testimonial-text {
+                    margin-bottom: 10px;
+                }
+                
+                .testimonial-author {
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        /* Estilos Explicación eLearning */
+        .elearning-video {
+            padding: 0.5rem;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+        }
+
+        .container-elearning {
+            padding: 0.5rem;
+
+            .elearning-sub-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                margin: 1rem 0;
+
+                .elearning-icon {
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 4rem;
+                        height: 4rem;
+                        border-radius: 50%;
+                        background-color: var(--background-color);
+                        color: var(--inverted-color);
+                        font-size: 1.5rem; 
+                    }
+                }
+            }
+        }
+
+        /* Estilos Noticias */
+        .inline-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+
+            h4 {
+                margin-top: 5px;
+                margin-right: 20px;
+            }
+
+            input[type="email"] {
+                padding: 5px;
+                border: 1px solid var(--background-color);
+                border-radius: 4px;
+                font-size: 1em;
+            }
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                background-color: var(--background-color);
+                color: var(--inverted-color);
+                font-size: 1em;
+                cursor: pointer;
+            }
+        }
+
+        /* Estilos formulario de contacto */
+        .contact-form {
+            margin: 2rem 0;
+
+            .form-control {
+                border: none;
+                outline: none;
+                border-bottom: 1px solid var(--background-color);
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 10px 0px;
+                font: inherit;
+            }
+            
+            .form-button {
+                background-color: var(--background-color);
+                padding: 10px 20px;
+                border: 1px solid var(--background-color-b);
+                color: var(--inverted-color);
+                margin-top: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                font: inherit;
+            }
+            
+            .form-button:hover {
+                transform: translateY(-5px);
+                background-color: var(--background-color-b);
+            }
+            
+            .form-label {
+                color: var(--secondary-color)
+            }
+
+            a {
+                text-decoration: none;
+                font: inherit;
+            }
+            
+            textarea {
+                resize: vertical;
+                font: inherit;
+            }
+        }
+
+        .container-contacts {
+            padding: 0.5rem;
+            background-color: var(--background-color);
+            height: 100%;
+
+            .contacts-sub-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 1rem;
+
+                h4 {
+                    font-weight: bold;
+                }
+
+                h4, p {
+                    color: var(--inverted-color);
+                }
+
+                .contacts-icon i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 4rem;
+                    height: 4rem;
+                    color: var(--inverted-color);
+                    font-size: 2.5rem; 
+                }
+            }
+        }
+
+        .container-social-media {
+            background-color: var(--primary-color);
+            margin: 0.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .social-media-icon {
+                a {
+                    text-decoration: none;
+
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 4rem;
+                        height: 4rem;
+                        color: var(--inverted-color);
+                        font-size: 2rem;   
+                    }
+                }
+            }
+        }
+
+        /* Estilos Servicios adicionales */
+        .additional-services-container {
+            text-align: center;
+
+            .services-sub-item {
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                h4 {
+                    margin-bottom: 0.5rem;
+                }
+
+                .services-icon {
+                    margin-bottom: 1rem;
+
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 4rem;
+                        height: 4rem;
+                        background-color: var(--background-color);
+                        color: var(--inverted-color);
+                        box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+                        font-size: 1.5rem; 
+                    }
+
+                    i:hover {
+                        background-color: var(--inverted-color);
+                        color: var(--background-color);
+                    }
+                }
+            }
+
+            .button-services {
+                background-color: var(--background-color);
+                color: var(--inverted-color);
+                text-decoration: none;
+                padding: 15px;
+                border-radius: 5px;
+                font-size: 1rem;
+                margin-top: 30px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                i {
+                    margin-left: .5rem;
+                }
+            }
+
+            .button-services:hover {
+                background-color: var(--background-color-b);
+            }
+        }
+    }
+
+    /* Estilos del Footer */
+    footer {
+        background-color: var(--background-color-b);
+        color: var(--inverted-color);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+
+        p {
+            font-size: 0.8rem;
+            color: var(--inverted-color);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        .container {
+            padding: 0 25px;
+            max-width: 80%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        .container {
+            padding: 0 20px;
+            max-width: 85%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.8rem;
+
+        .container {
+            padding: 0 15px;
+            max-width: 90%;
+        }
+    
+        header {
+            .hamburger {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: var(--background-color);
+                color: var(--inverted-color);
+                min-width: 50vw;
+                position: absolute;
+                right: 0;
+                top: 110px;
+                z-index: 1;
+
+                .sub-menu {
+                    text-align: center;
+                    margin-left: 0;
+                    padding: 0.7rem;
+                    font-size: 0.9rem;
+                    border-bottom: 1px solid var(--background-color-b);
+                }                
+            }
+        }
+
+        section {
+            .container-contacts {
+                .contacts-sub-item {
+                    display: block;
+                }
+            }
+
+            .container-get-started {
+                padding: 1rem;
+
+                p {
+                    margin-right: 0;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.7rem;
+
+        .container {
+            padding: 0 5px;
+            max-width: 95%;
+        }
+
+        .flex {
+            display: initial;
+        }
+
+        .row {
+            flex-direction: column;
+        }
+
+        .col-2 {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+        .col-2-3 {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+        .col-3 {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .col-4 {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .hide-sm {
+            display: none;
+        }
+        
+        header {
+            .menu {
+                min-width: 100vw;
+
+                .sub-menu {
+                    padding: 0.8rem;
+                    border-bottom: 1px solid var(--background-color-b);
+                }                
+            }
+        }
+
+        section {
+            .additional-services-container {
+                .button-services {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .container-get-started {
+                padding: 1rem;
+
+                h3 {
+                    text-align: center;
+                }
+
+                p {
+                    margin-right: 0;
+                    text-align: justify;
+                }
+            }
+
+            .testimonial-container {
+                .testimonial-card {
+                    margin: 0 auto 1rem auto;   
+                }
+            }
+
+            .banner-container {
+                .button-signup {
+                    font-size: 0.8rem;
+                }
+                
+                .carousel {
+                    .carousel-image {
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

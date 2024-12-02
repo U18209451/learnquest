@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Usado para reconocer el formato Unicode UTF-8 -->
+        <meta charset="UTF-8">
+        <!-- Sirve para ayudar en el layout de los navegadores móviles -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Se usa como un resumen del contenido de la página y es usualmente recogido por los Web Crawlers (Google, Bing, etc.) -->
+        <meta name="description" content="Learn Quest es una página de eLearning con acceso a múltiples cursos para hispanohablantes que desean aprender nuevas habilidades.">
+        <!-- Especifica el autor de la página -->
+        <meta name="author" content="">
+        <!-- Nombre del aplicativo -->
+        <meta name="application-name" content="LearnQuest">
+
+        <!-- Permite asignar el Favicon de la página -->
+        <link rel="icon" href="./resources/favicon.ico" type="image/x-icon">
+        <!-- Permite referenciar el Stylesheet que debe ser usado en el HTML -->
+        <link rel="stylesheet" href="./resources/css/styles.css">
+
+        <title>eLearning Learn Quest</title>
+    </head>
+    <body>
+        <!-- Header de la página web, incluye logo, navegación al home y menu -->
+        <header id="main-header">
+            <div class="container">
+                <nav class="menu-container">
+                    <div class="header-logo">
+                        <a href="./index.html">
+                            <img src="./resources/images/logo.png" alt="logo" />
+                        </a>
+                    </div>
+
+                    <button class="hamburger" onclick="toggleMenu()">☰</button>
+                    <ul class="menu">
+                        <li class="sub-menu">
+                            <a class="sub-menu-link" href="./index.html#section-course-gallery"></i> Galería</a>
+                        </li>
+                        <li class="sub-menu">
+                            <a class="sub-menu-link" href="./index.html#section-testimonials"></i> Testimonios</a>
+                        </li>
+                        <li class="sub-menu">
+                            <a class="sub-menu-link" href="./index.html#section-elearning"></i> eLearning</a>
+                        </li>
+                        <li class="sub-menu">
+                            <a class="sub-menu-link" href="./services.html"></i> Servicios</a>
+                        </li>
+                        <li class="sub-menu">
+                            <a class="sub-menu-link" href="./contact.html"></i> Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Sección del banner -->
+        <section id="section-banner" class="no-margin">
+            <div class="container-wide banner-container">
+                <div class="row carousel">
+                    <div class="col carousel-image carousel-image-1">
+                        <h3><strong>Contáctanos</strong></h3>
+                    </div>
+                    <div class="col carousel-image carousel-image-2">
+                        <h3><strong>Contáctanos</strong></h3>
+                    </div>
+                    <div class="col carousel-image carousel-image-3">
+                        <h3><strong>Contáctanos</strong></h3>
+                    </div>
+                    <button class="prev carousel-button" onclick="moveSlide(-1)">❮</button>
+                    <button class="next carousel-button" onclick="moveSlide(1)">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de formulario de contacto -->
+        <section id="section-contact-form" class="no-margin">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col col-2-3">
+                        <form action="" class="contact-form" method="post">
+                            <div class="row">
+                                <div class="col col-2">
+                                    <input class="form-control" type="text" id="form-name" name="form-name" placeholder="Nombre" required>
+                                </div>
+    
+                                <div class="col col-2">
+                                    <input class="form-control" type="email" id="form-email" name="form-email" placeholder="Correo Electrónico" required>
+                                </div>
+        
+                                <div class="col col-1">
+                                    <input class="form-control" type="text" id="form-subject" name="form-subject" placeholder="Asunto" required>
+                                </div>
+    
+                                <div class="col col-1">
+                                    <textarea class="form-control" type="text" id="form-message" name="form-message" placeholder="Mensaje" required rows="5"></textarea>
+                                </div>
+    
+                                <div class="col col-1">
+                                    <input class="form-control" type="text" id="form-captcha" name="form-captcha" placeholder="Captcha: 3 + 4 = ?" required>
+                                </div>
+    
+                                <div class="col col-1">
+                                    <input id="form-checkbox" type="checkbox" required>
+                                    <label class="form-label" for="form-checkbox">
+                                        He leído y acepto los 
+                                        <a target="_blank" href="https://www.google.com/search?q=terminos+y+condiciones">términos y condiciones</a> 
+                                        de privacidad acerca del uso de mis datos personales.
+                                    </label>
+                                </div>
+    
+                                <div class="col col-1">
+                                    <button type="submit" class="form-button"><i class="fa-solid fa-paper-plane"></i> Enviar mensaje</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col col-3">
+                        <div class="container-contacts">
+                            <div class="contacts-sub-item">
+                                <div class="contacts-icon">
+                                    <i class="fa fa-building"></i>
+                                </div>
+                                <div>
+                                    <h4>Oficinas</h4>
+                                    <p>Lima: Av. Mayor 685<br/>Arequipa: Av. Principal 1458</p>
+                                </div>
+                            </div>
+                            <div class="contacts-sub-item">
+                                <div class="contacts-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4>Correos</h4>
+                                    <p>Lima: lima@learnquest.com<br/>Arequipa: aqp@learnquest.com</p>
+                                </div>
+                            </div>
+                            <div class="contacts-sub-item">
+                                <div class="contacts-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4>Teléfonos</h4>
+                                    <p>Lima: +51 0 1 4561234<br/>Arequipa: +51 0 54 365789</p>
+                                </div>
+                            </div>
+                            <div class="contacts-sub-item">
+                                <div class="contacts-icon">
+                                    <i class="fa fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4>Horarios</h4>
+                                    <p>Lima: L-V 09:00-18:00<br/>Arequipia: L-V 08:00-17:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección redes sociales -->
+        <section id="section-social-media" class="no-margin">
+            <div class="container-wide">
+                <div class="row">
+                    <div class="col col-4 no-padding">
+                        <div class="container-social-media">
+                            <div class="social-media-icon">
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-4 no-padding">
+                        <div class="container-social-media">
+                            <div class="social-media-icon">
+                                <a href="https://www.instagram.com" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-4 no-padding">
+                        <div class="container-social-media">
+                            <div class="social-media-icon">
+                                <a href="https://www.linkedin.com" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-4 no-padding">
+                        <div class="container-social-media">
+                            <div class="social-media-icon">
+                                <a href="https://www.youtube.com" target="_blank">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección con el mapa de Google Maps -->
+        <section id="section-map" class="no-margin">
+            <iframe class="width-100" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17982.584453749478!2d137.46222580365574!3d-29.53126522662312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2suk!4v1731537993570!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!-- Footer del aplicativo con copyright notice -->
+        <footer class="no-margin">
+            <p>&copy; 2024 Learn Quest. Todos los derechos reservados.</p>
+        </footer>
+
+        <a href="#" class="scroll-up">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+
+        <script src="resources/scripts/scripts.js"></script>
+    </body>
+</html>
